@@ -19,6 +19,8 @@ header {
       transition: color 0.3s; }
       header nav li:hover {
         color: #d0ff00; }
+      header nav li a {
+        text-decoration: none; }
 
 section {
   padding: 50px; }
