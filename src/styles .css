@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px; }
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    header nav li {
+      cursor: pointer;
+      transition: color 0.3s; }
+      header nav li:hover {
+        color: #d0ff00; }
+
+section {
+  padding: 50px; }
+  section .imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    section .imagem #imag {
+      max-width: 30%;
+      height: 100%;
+      border-radius: 50%;
+      /* Deixa a imagem redonda */ }
+  section .sobreMim h2 {
+    color: #333;
+    margin-bottom: 10px; }
+  section .sobreMim p {
+    color: #333;
+    line-height: 1.6; }
+  section .habilidades h2 {
+    color: #333;
+    margin-bottom: 10px; }
+  section .habilidades p {
+    color: #333;
+    line-height: 1.6; }
+  section .experiencia h2 {
+    color: #333;
+    margin-bottom: 10px; }
+  section .experiencia p {
+    color: #333;
+    line-height: 1.6; }
+  section .contact-form h2 {
+    color: #333;
+    margin-bottom: 10px; }
+  section .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; }
+  section .contact-form input,
+  section .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: "Roboto", sans-serif; }
+  section .contact-form textarea {
+    resize: vertical; }
+  section .contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+    section .contact-form button:hover {
+      background-color: #0062cc; }

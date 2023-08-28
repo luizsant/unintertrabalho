@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+$primary-color: #007bff;
+$secondary-color: #333;
+$background-color: #f7f7f7;
+$colorYellow: #d0ff00;
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+  nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      cursor: pointer;
+      transition: color 0.3s;
+      &:hover {
+        color: $colorYellow;
+      }
+    }
+  }
+}
+
+section {
+  padding: 50px;
+  .imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #imag {
+      max-width: 30%;
+      height: 100%;
+      border-radius: 50%; /* Deixa a imagem redonda */
+    }
+  }
+
+  .sobreMim {
+    h2 {
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $secondary-color;
+      line-height: 1.6;
+    }
+  }
+
+  .habilidades {
+    h2 {
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $secondary-color;
+      line-height: 1.6;
+    }
+  }
+
+  .experiencia {
+    h2 {
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $secondary-color;
+      line-height: 1.6;
+    }
+  }
+
+  .contact-form {
+    h2 {
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: $secondary-color;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      color: $secondary-color;
+      font-family: "Roboto", sans-serif;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
