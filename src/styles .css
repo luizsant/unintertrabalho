@@ -20,7 +20,10 @@ header {
       header nav li:hover {
         color: #d0ff00; }
       header nav li a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: white; }
+      header nav li a:visited {
+        color: inherit; }
 
 section {
   padding: 50px; }
