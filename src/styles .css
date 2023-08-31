@@ -21,12 +21,30 @@ header {
         color: #d0ff00; }
       header nav li a {
         text-decoration: none;
-        color: white; }
-      header nav li a:visited {
         color: inherit; }
+        header nav li a:visited {
+          color: inherit; }
 
 section {
   padding: 50px; }
+  section .imagem h2,
+  section .imagem p,
+  section .sobreMim h2,
+  section .sobreMim p,
+  section .habilidades h2,
+  section .habilidades p,
+  section .experiencia h2,
+  section .experiencia p,
+  section .portfolio h2,
+  section .portfolio p {
+    color: #333;
+    margin-bottom: 10px; }
+  section .imagem p,
+  section .sobreMim p,
+  section .habilidades p,
+  section .experiencia p,
+  section .portfolio p {
+    line-height: 1.6; }
   section .imagem {
     display: flex;
     justify-content: center;
@@ -34,33 +52,10 @@ section {
     section .imagem #imag {
       max-width: 30%;
       height: 100%;
-      border-radius: 50%;
-      /* Deixa a imagem redonda */ }
-  section .sobreMim h2 {
-    color: #333;
-    margin-bottom: 10px; }
-  section .sobreMim p {
-    color: #333;
-    line-height: 1.6; }
-  section .habilidades h2 {
-    color: #333;
-    margin-bottom: 10px; }
-  section .habilidades p {
-    color: #333;
-    line-height: 1.6; }
-  section .experiencia h2 {
-    color: #333;
-    margin-bottom: 10px; }
-  section .experiencia p {
-    color: #333;
-    line-height: 1.6; }
-  section .contact-form h2 {
-    color: #333;
-    margin-bottom: 10px; }
+      border-radius: 50%; }
   section .contact-form label {
     display: block;
-    margin-bottom: 5px;
-    color: #333; }
+    margin-bottom: 5px; }
   section .contact-form input,
   section .contact-form textarea {
     width: 100%;
@@ -68,8 +63,7 @@ section {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 15px;
-    color: #333;
-    font-family: "Roboto", sans-serif; }
+    font-family: inherit; }
   section .contact-form textarea {
     resize: vertical; }
   section .contact-form button {
@@ -82,3 +76,38 @@ section {
     transition: background-color 0.3s; }
     section .contact-form button:hover {
       background-color: #0062cc; }
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 0 22px;
+  margin-top: 10px; }
+
+.project-container {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out; }
+  .project-container:hover {
+    transform: scale(1.05);
+    z-index: 2; }
+  .project-container .project-window {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+    object-position: center; }
+    .project-container .project-window::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-color);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out; }
+  .project-container:hover .project-window::before {
+    opacity: 0.5; }

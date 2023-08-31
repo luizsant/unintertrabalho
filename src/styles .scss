@@ -15,24 +15,29 @@ header {
   background-color: $primary-color;
   color: white;
   padding: 20px;
+
   nav {
     display: flex;
     justify-content: space-around;
     list-style: none;
     padding: 0;
     margin: 0;
+
     li {
       cursor: pointer;
       transition: color 0.3s;
+
       &:hover {
         color: $colorYellow;
       }
+
       a {
         text-decoration: none;
-        color: white;
-      }
-      a:visited {
         color: inherit;
+
+        &:visited {
+          color: inherit;
+        }
       }
     }
   }
@@ -40,6 +45,23 @@ header {
 
 section {
   padding: 50px;
+
+  .imagem,
+  .sobreMim,
+  .habilidades,
+  .experiencia,
+  .portfolio {
+    h2,
+    p {
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+
   .imagem {
     display: flex;
     justify-content: center;
@@ -48,53 +70,16 @@ section {
     #imag {
       max-width: 30%;
       height: 100%;
-      border-radius: 50%; /* Deixa a imagem redonda */
-    }
-  }
-
-  .sobreMim {
-    h2 {
-      color: $secondary-color;
-      margin-bottom: 10px;
-    }
-    p {
-      color: $secondary-color;
-      line-height: 1.6;
-    }
-  }
-
-  .habilidades {
-    h2 {
-      color: $secondary-color;
-      margin-bottom: 10px;
-    }
-    p {
-      color: $secondary-color;
-      line-height: 1.6;
-    }
-  }
-
-  .experiencia {
-    h2 {
-      color: $secondary-color;
-      margin-bottom: 10px;
-    }
-    p {
-      color: $secondary-color;
-      line-height: 1.6;
+      border-radius: 50%;
     }
   }
 
   .contact-form {
-    h2 {
-      color: $secondary-color;
-      margin-bottom: 10px;
-    }
     label {
       display: block;
       margin-bottom: 5px;
-      color: $secondary-color;
     }
+
     input,
     textarea {
       width: 100%;
@@ -102,12 +87,13 @@ section {
       border: 1px solid #ccc;
       border-radius: 4px;
       margin-bottom: 15px;
-      color: $secondary-color;
-      font-family: "Roboto", sans-serif;
+      font-family: inherit;
     }
+
     textarea {
       resize: vertical;
     }
+
     button {
       background-color: $primary-color;
       color: white;
@@ -116,9 +102,55 @@ section {
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s;
+
       &:hover {
         background-color: darken($primary-color, 10%);
       }
     }
+  }
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 0 22px;
+  margin-top: 10px;
+}
+
+.project-container {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  .project-window {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+    object-position: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-color);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &:hover .project-window::before {
+    opacity: 0.5;
   }
 }
